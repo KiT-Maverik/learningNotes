@@ -49,8 +49,7 @@ let user: { name: string, age: number } = {
 
 // ===== // Кортеж (tuple) — упорядоченный набор фиксированной длины.
 // Кортеж, как структура данных, примечателен тем, что в него нельзя добавлять элементы, а так же нельзя нарушать порядок следования (менять местами элементы).
-let tuple1: [number, string] = [1, "Some text"];
-let tuple2: [number, string] = ["Some text", 1]; // Эта инструкция вызовет ошибку
+let tuple1: [number, string] = [1, "Some text"]; // Если поменять местами значения, это вызовет ошибку
 
 // ===== // enum
 // Тип данных для работы с перечислениями.
@@ -72,6 +71,9 @@ console.log(my2ndEnum.option2); // 5
 enum my3rdEnum { option1 = `Go left`, option2 = `Go right`, option3 = `Go forward` }
 
 console.log(my3rdEnum.option2); // Go right
+
+// enum можно использовать как тип
+let eVariable: my3rdEnum; // Переменной eVariable можно присваивать значения только из my3rdEnum
 
 // ==================
 // РАБОТА С ФУНКЦИЯМИ
@@ -101,8 +103,7 @@ function function5(arg1, arg2) {
     console.log(arg1)
 }
 
-function5(2);    // Эта инструкция вызовет ошибку
-function5(2, 55, 22); // Лишние аргументы также запрещены
+// Нельзя передать в функцию меньше или больше аргументов, чем она ожидает
 
 // Можно сделать аргумент необязательным, но это нужно явно указать
 function function6(arg1, arg2?) {
