@@ -17,7 +17,7 @@
 // protected - свойство класса доступно внутри класса и его наследников.
 // readonly - свойство класса доступно только для чтения. Важная особенность: readonly свойство должно быть реализовано при объявлении или в конструкторе.
 
-class pew {
+class Pew {
     public property2: string = `This property is public`;
     private property1: string = `This property is private`;
     protected property3: string = `This property is protected`;

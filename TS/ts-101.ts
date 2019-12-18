@@ -53,6 +53,25 @@ let tuple1: [number, string] = [1, "Some text"];
 let tuple2: [number, string] = ["Some text", 1]; // Эта инструкция вызовет ошибку
 
 // ===== // enum
+// Тип данных для работы с перечислениями.
+// Объявляется с помощью ключевого слова "enum"
+enum my1stEnum { option1, option2, option3}
+
+// Каждый элемент enum по умолчанию имеет цифровое значение рассчитываемое в порядке следования. Расчет начинается с нуля.
+console.log(my1stEnum[1]); // option2
+
+// Порядковые номера элементов можно менять, но это повлияет на следующие элементы enum
+enum my2ndEnum { option1, option2 = 5, option3 }
+
+console.log(my2ndEnum[6]); // option3
+
+// К элементам enum можно обращаться по имени
+console.log(my2ndEnum.option2); // 5
+
+// Элементу enum кроме порядкового номера можно присваивать и другие значения.
+enum my3rdEnum { option1 = `Go left`, option2 = `Go right`, option3 = `Go forward` }
+
+console.log(my3rdEnum.option2); // Go right
 
 // ==================
 // РАБОТА С ФУНКЦИЯМИ
