@@ -55,5 +55,4 @@ abstract class My2ndClass {
 class My3rdClass {
     property1: string = 'This is 1st property';
 }
-
 let sample1: My3rdClass; // Теперь в переменную 'sample1' можно записывать только сущности, структура которых идентична 'My3rdClass'.
