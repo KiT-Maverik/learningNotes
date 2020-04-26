@@ -19,8 +19,6 @@
 | Connected      | Condescending  |
 | Delightful     | Inconsiderate  |
 | Satisfying     | Frustrating    |
-
-slide why does it matter
 	
 Why UX is hard?
 * You are not a user.
@@ -46,7 +44,7 @@ UX design process model has two stages:
 UX design model in a form of a numbered stages will not handle continious fails and improvements, that why it has aa form of a spiral.
 ![UX design model](./img/101-1.png)
 
-# UX design key methods.
+# UX design methods
 * Developing Scenarios, personas, user stories.
 * Sketching and ideations.
 * Storyboarding.
@@ -56,12 +54,12 @@ UX design model in a form of a numbered stages will not handle continious fails 
 
 
 # Components of UX
-* Value
+* **Value**
   *	Is it useful?
   *	Is it better than the alternatives?
-* Usability
+* **Usability**
   *	Can users do what they need to do?
-* Adoptability
+* **Adoptability**
   *	Is it easy to find and start using?
-* Desirability
+* **Desirability**
   *	Is it fun, attractive, and pleasant to use?
