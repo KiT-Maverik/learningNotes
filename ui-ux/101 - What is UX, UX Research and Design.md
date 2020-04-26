@@ -20,7 +20,7 @@
 | Delightful     | Inconsiderate  |
 | Satisfying     | Frustrating    |
 	
-Why UX is hard?
+# Why UX is hard?
 * You are not a user.
 * Computers are weird.
 * Software is usually complex.
