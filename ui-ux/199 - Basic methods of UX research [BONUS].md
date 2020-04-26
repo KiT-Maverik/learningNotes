@@ -23,4 +23,22 @@
 * Walkthrough - stepping through an interaction sequence with a "user-eye" view to find probable breakdowns.
 * Comparative analysis - systematically comparing design with similar designs to identify strengths and weaknesses.
 
-# 
+# When to use?
+Each technique should be used at its time.
+
+### Ask when:
+* Observation infeasible (infrequent, long, private).
+* Values and motivations are key.
+* Large numbers and hign certainty are needed (actual only for surveys).
+
+### Observe when:
+* Self-report will miss information (memory, tacit knowledge).
+* Process and communications are important.
+* Large numbers and hign certainty are needed (actual only for analytics).
+
+### Observe when:
+* You have a product to inspect
+* Interacting with users is too expensive or cumbersome
+
+
+![UX avaluation in model](./img/199-1.png)
