@@ -1,72 +1,50 @@
-how people act
+# Seven stages of action
+![UX design model](./img/104-1.png)
 
-seven stages of action
-forming the goal
-Forming intention
-selecting the avtion
-executing the action
-persieve the state of the world (post change)
-interpret the state of the world
-evaluating the outcome
-(image?)
+This model is separated on two gulfs:
+* Gulf of execution (1-4).
+* Gulf of action (5-7).
 
-Gulfs of Execution and Evaluation
-1-4 gulf of execution
-5-7 gulf of action
+# Bridging the gulfs
+* Understand:
+  *	Users goals.
+  *	How they think about accomplishing them.
+* Make sure likely actions are:
+  * Visible.
+  * Make sense.
+* Make sure likely results of actions are:
+  *	Visible
+  *	Make sense
 
-
-bridging the gulfs
-understand
-	Users goals
-	how they thisk about accomplishing them
-Make sure likely actionas are
-	visible
-	make sense
-Make sure likely results of actionas are
-	visible
-	make sense
-
-examples
-glass doors. its not obvious what door to push to get inside (actions are not visile)
-traffic light switch. You push the button, and if there is no light you will not receive a feedback (results are not visible)
+> Example:  
+> * Glass doors. It's not obvious what door to push to get inside (actions are not visible).
+> * Traffic light switch. You push the button, and if there is no light you will not receive feedback (results are not visible).
 
 # Design Principles
+For users to be able to effectively make use of a system that you've designed, they need to be able to discover what the system can do.  
+Users need to be able to discover:
+* What system can do.
+* How to operate it.
 
-2 notes 
+### Supporting discoverability
+* **Affordances** - feature of an object or an environment that indicates the possibility of action.
+* **Signifiers** - indication of what action will occur and, in many cases, where the action can occur (basically a sign)
+* **Feedback**
+* **Constraints** 
+* **Conceptual model** - how user understand system work.
 
-
-## affordance
-An affordance is a feature of an object or an environment that indicates the possibility of action.
-
-## Signifiers 
-an indication of what action will occur and, in many cases, where the action can ocucr (basically a sign)
-
-Affordances of done well can communicate intuitively
-Signifiers are often necessary when many actions are possible
-Conventions and standards can reduce the need of affordances
-
-## Feedback
-user needs to know that the system has received their input
-user needs to know what the system did with their input
-
-## Constraints
-Unavailable actions hould be disabled
-Limiting the total number of options will make selection easier
-
-
-And so, by constraining the actions that the user is able to take, we're able to keep them from taking an action that won't lead towards the result that they want, but encourages them to take the actions that are available.
+# Hints
+* Affordances of done well can communicate intuitively.
+* Signifiers are often necessary when many actions are possible.
+* Conventions and standards can reduce the need for affordances.
+* Unavailable actions should be disabled. Limiting the total number of options will make the selection easier.
+* User needs to know that the system has received its input and what it did with that input.
+* Use consistency across all the places across the system, so the user will learn something in one place and will be able to use their knowledge in others.
+* By constraining the actions that the user is able to take, we're able to keep them from taking an action that won't lead towards the result that they want, but encourages them to take the actions that are available.
 
 ## Conceptual models
-And finally, it's important to support the formation of user's conceptual models so that as they interact with the system, they can learn not only how the specific actions work that they've already taken, but how future actions might work using that system. 
+It's important to support the formation of user's conceptual models so that as they interact with the system, they can learn not only how the specific actions work that they've already taken, but how future actions might work using that system. 
 
+Conceptual models support simulation of future actions
 
-Copceptual models support simulation of future actions
-Appropriate use of affordances, signifiers, feedback and constraints lead to formation of accurate conceptual models
-
-conceptual model is how user understand system work
-
-## Consistency
-
-use consistency across all the places across the system, so user will learn something in one place and will be able to use their knowledge in others.
-
-## metaphor
+> Appropriate use of affordances, signifiers, feedback, and constraints lead to the formation of accurate conceptual models 
