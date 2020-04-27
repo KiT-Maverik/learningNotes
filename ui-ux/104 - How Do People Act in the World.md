@@ -28,8 +28,8 @@ Users need to be able to discover:
 
 ### Supporting discoverability
 * **Affordances** - feature of an object or an environment that indicates the possibility of action.
-* **Signifiers** - indication of what action will occur and, in many cases, where the action can occur (basically a sign)
-* **Feedback**
+* **Signifiers** - feature of an environment or system that communicates through verbiage or imagery what will happen if an action is taken.
+* **Feedback** - change in an environment or system that indicates that a user’s action was recognized and communicates the result of that action.
 * **Constraints** 
 * **Conceptual model** - how user understand system work.
 
