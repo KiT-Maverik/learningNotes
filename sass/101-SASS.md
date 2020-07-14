@@ -1,84 +1,169 @@
-varoiables
+# Переменные
 
+```scss
 $variableName: black;
 
-div
-	background-color: $variableName
+body {
+  background-color: $variableName;
+}
+```
 
-вложенные стили
+**Результат**: `black` установлен как `background-color` тега `body`.
 
-body
-	color: red;
-	div
-		margim: 0 auto
+# Вложенные стили
 
-mix in
-переиспользуемые блоки в css
-@mixin font {
-	font-size: 10px;
-	font-weight: bold;
+```scss
+body {
+  h1 {
+    color: green;
+  }
+}
+```
+
+**Результат**: цвет всех заголовков `h1` внутри тега `body` установлен `green`.
+
+# Mixin
+Mixin это переиспользуемый блок CSS-кода.
+Сначала нужно объявить, а затем включить миксин в существующий класс.
+
+```scss
+// Объявление
+@mixin bgColor {
+  background-color: red;
 }
 
-миксин нужно объявлять и подключать
+// Использование
+body {
+  @include bgColor;
+}
+```
 
-p {
-	@include font;
+**Результат**: `red` установлен как `background-color` тега `body`.
+
+### Mixin: базовая работа с параметрами
+```scss
+// Объявление
+@mixin bgColor($color) {
+  background-color: $color;
 }
 
-в миксины можно передавать параметры
-@mixin font ($color)
-@mixin font ($color: red) // значение по умолчанию
+// Вызов
+body {
+  @include bgColor(blue);
+}
+```
 
-@include font (blue) // если анесколько параметров, нужно соблюдать очередность. Если не хочешь можно передавать данные с названиями ($color: blue)
+**Результат**: `blue` установлен как `background-color` тега `body`.  
 
-@mixin font ($color...)
-полезно для установки паддингов и марждинов
-все переданные параметры объединяюбтся в  строку и подставляются
+SCSS позволяет устанавливать значения по умолчанию для параметров миксинов
+```scss
+// Объявление
+@mixin bgColor($color: red) {
+  background-color: $color;
+}
+```
 
-
-псевдоклассы и псевдоэлементы
-
-псевдокласс
-div {
-	&hover{
-
-	}
-	}
-
-@mixinn mName() {
-	div {
-
-	}
+### Mixin: работа с множеством параметров
+SCSS позволяет передавать множество параметров в миксин.
+```scss
+// Объявление
+@mixin bgColor($color, $padding) {
+  background-color: $color;
+  padding: $padding;
 }
 
-импорт файлов
+// Вызов
+body {
+  @include bgColor(brown, 20px);
+}
+```
+* Если если вы передаете только значения параметров (без названий) нужно соблюдать очередность.
+* Очередность можно нарушать только если вы передаете название и значение параметров.
+```scss
+// Объявление
+@mixin bgColor($color, $padding) {
+  background-color: $color;
+  padding: $padding;
+}
 
+// Вызов
+body {
+  @include bgColor($padding: 20px, $color: brown);
+}
+```
+
+### Mixin: передача нескольких значений в один параметр
+Вы можете передавать несколько значений в один параметр. Для этого к его имени нужно добавить три точки. Все переданные значения будут объединены в  строку и подставлены.
+```scss
+// Объявление
+@mixin padding($padding...) {
+  padding: $padding;
+}
+
+// Вызов
+body {
+  @include padding(20px 50px);
+}
+```
+
+**Результат**: для тега `body` установлены следующие паддинги: `padding-top` и `padding-bottom` по 20px, `padding-right` и `padding-left` по 50px.
+
+### Mixin: расширение
+```scss
+@mixin bgColor {
+  background-color: yellow;
+  @content; // Сюда будет подставлено расширение
+}
+body {
+  @include bgColor {
+    padding: 50px; // Расширение
+  }
+}
+```
+**Результат**: для тега `body` установлены следующие параметры: `background-color: yellow;` и `padding: 50px;`.  
+
+# Псевдоклассы
+ ```scss
+body {
+  background-color: yellow;
+  &:hover{
+    background-color: red;
+  }
+}
+ ```
+**Результат**: `yellow` установлен как `background-color` тега `body`; при наведении цвет меняется на `red`.  
+По такой же схеме можно управлять псевдоэлементами.
+
+# Импорт файлов
+SCSS позволяет импортировать модули из других файлов.
+ ```scss
 @import "./path/to/file";
+ ```
+# Встроенные модули
+В SASS есть встроенные модули, с множеством полезных функций. 
+> [Built-In Modules](https://sass-lang.com/documentation/modules)
 
-математические операции
-width: (100% +30%)
-единицы измерения должны быть одинаковые
-
-встроенные функции  в сас
-
-
-условия
-@if($cols >=) {
-	width: 100%
+# Математические операции
+ ```scss
+body {
+  padding: (20px + 30px);
 }
-@else {
-	width: 50%
+ ```
+**Результат**: `padding: 50px` установлен для тега `body`.  
+* Используемые в выражении единицы измерения должны быть одинаковыми.
+
+# Условные операторы
+ ```scss
+@mixin bgColor ($colorize) {
+  @if ($colorize == true) {
+    background-color: green;
+  }
+  @else {
+    background-color: red;
+  }
 }
-
-
-=== content
-
-расширение миксинов
-
-@content ключевое слово. где размещено, там и будет подставлен доп контент.
-
-.page {
-	@include mixinName() {
-	// additional content goes here
-	}
+body {
+@include bgColor(true); // background-color: green;
+@include bgColor(false); // background-color: red;
 }
+ ```
